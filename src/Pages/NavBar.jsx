@@ -1,25 +1,17 @@
-// src/components/NavBar.jsx
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   Home,
   Search,
-  Compass,
-  Film, // Keep Film icon as it's typically associated with Reels
-  MessageCircle,
-  Heart,
-  PlusSquare,
+  Film,
   Menu,
   User,
   TrendingUp,
-  Bookmark
 } from 'lucide-react';
 
 const   NavBar = () => {
   const location = useLocation();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [notifications, setNotifications] = useState(3);
-  const [messages, setMessages] = useState(5);
 
   const navItems = [
     { id: 'home', icon: Home, label: 'Home', path: '/' },
@@ -81,12 +73,6 @@ const   NavBar = () => {
             </Link>
           ))}
         </nav>
-        <div className="p-4 border-t border-gray-200">
-          <button className="flex items-center space-x-4 w-full p-3 rounded-lg hover:bg-gray-100 transition-colors duration-300">
-            <Menu size={24} className="text-gray-600" />
-            <span className="font-medium text-gray-600">Settings</span>
-          </button>
-        </div>
       </div>
 
       {/* Tablet Top Navigation */}
@@ -95,7 +81,7 @@ const   NavBar = () => {
           SwiftRead
         </h1>
         <div className="flex items-center space-x-6">
-          {navItems.filter(item => ['home', 'trending', 'search', 'notifications', 'messages', 'profile'].includes(item.id)).map((item) => (
+          {navItems.filter(item => ['home', 'trending', 'search','reels', 'profile'].includes(item.id)).map((item) => (
             <Link
               key={item.id}
               to={item.path}
@@ -118,19 +104,12 @@ const   NavBar = () => {
               </div>
             </Link>
           ))}
-          <button
-            onClick={() => setShowMobileMenu(!showMobileMenu)}
-            className="p-3 rounded-lg hover:bg-gray-100 transition-colors duration-200"
-          >
-            <Menu size={24} className="text-gray-600" />
-          </button>
         </div>
       </div>
-
       {/* Mobile Bottom Navigation */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 border-t border-gray-200 z-50 backdrop-blur-md bg-white/80">
         <div className="flex items-center justify-around py-3">
-          {navItems.filter(item => ['home', 'trending', 'create', 'notifications', 'profile', 'reels'].includes(item.id)).map((item) => ( // Reverted 'reels'
+          {navItems.filter(item => ['home','search', 'trending', 'profile', 'reels'].includes(item.id)).map((item) => ( // Reverted 'reels'
             <Link
               key={item.id}
               to={item.path}
@@ -155,50 +134,12 @@ const   NavBar = () => {
           ))}
         </div>
       </div>
-
-      {/* Mobile Top Bar */}
       <div className="md:hidden fixed top-0 left-0 right-0 h-14  border-b border-gray-200 flex items-center justify-between px-4 z-40 backdrop-blur-md bg-white/80">
         <h1 className="text-lg font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-clip-text text-transparent">
           SwiftRead
         </h1>
-        <div className="flex items-center space-x-4">
-          <button className="relative p-2">
-            <Heart size={24} className="text-gray-600" />
-            {notifications > 0 && (
-              <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
-                {notifications}
-              </span>
-            )}
-          </button>
-          <button className="relative p-2">
-            <MessageCircle size={24} className="text-gray-600" />
-            {messages > 0 && (
-              <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
-                {messages}
-              </span>
-            )}
-          </button>
-        </div>
       </div>
 
-      {/* Tablet Dropdown Menu */}
-      {showMobileMenu && (
-        <div className="hidden md:block lg:hidden fixed top-16 right-6  border border-gray-200 rounded-lg shadow-xl z-50 min-w-48 backdrop-blur-md bg-white/80">
-          <div className="p-2">
-            {navItems.filter(item => ['create', 'saved', 'explore', 'reels'].includes(item.id)).map((item) => ( // Reverted 'reels'
-              <Link
-                key={item.id}
-                to={item.path}
-                onClick={() => setShowMobileMenu(false)}
-                className="flex items-center space-x-3 w-full p-3 rounded-lg hover:bg-gray-100 transition-colors duration-200"
-              >
-                <item.icon size={20} className="text-gray-600" />
-                <span className="text-gray-600">{item.label}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
     </>
   );
 };
