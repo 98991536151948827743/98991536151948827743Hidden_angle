@@ -4,44 +4,57 @@ import { motion } from "motion/react"
 import Footer from '../Components/footer';
 
 const HomePage = () => {
+    const spaceIntelligenceItems = [
+    { text: "<strong>Quick Digests:</strong> Get concise updates on new missions and discoveries." },
+    { text: "<strong>Impactful Insights:</strong> Understand key cosmic events without the fluff." },
+    { text: "<strong>Stay Ahead:</strong> Monitor commercial space trends for strategic awareness." },
+    { text: "<strong>Retain More:</strong> Focused summaries for better knowledge absorption." },
+  ];
+  const techProductivityItems = [
+    { text: "<strong>Rapid Updates:</strong> Swiftly grasp AI, software, and hardware innovations." },
+    { text: "<strong>Actionable Knowledge:</strong> Apply tech insights directly to your work." },
+    { text: "<strong>Innovation at Speed:</strong> Identify emerging trends for competitive advantage." },
+    { text: "<strong>Streamlined Information:</strong> Connect dots across diverse tech sectors efficiently." },
+  ];
   return (
     <>
-      <div className=" rounded-lg p-6 shadow-md text-center mb-1 bg-white w-full  max-w-none lg:max-w-6xl transition-all duration-500 ease-in-out">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">
-          SwiftRead: Your News, In Seconds.
-        </h1>
-        <p className="text-lg text-gray-700 mb-4">
-          Tired of endless scrolling and information overload? SwiftRead delivers the essence of the news you need, exactly when you need it.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-          <div className="p-4 bg-blue-50 rounded-lg">
-            <h3 className="font-semibold text-blue-800 mb-2">Why SwiftRead is Needed:</h3>
-            <ul className="list-disc list-inside text-sm text-blue-700 space-y-1">
-              <li><strong>Save Time:</strong> Get concise summaries, not lengthy articles.</li>
-              <li><strong>Combat Overload:</strong> Focus on essential information, filtered from the noise.</li>
-              <li><strong>Understand Relevance:</strong> We highlight *why* each story matters to you.</li>
-              <li><strong>Unbiased Facts:</strong> AI-powered summaries for a neutral perspective.</li>
-            </ul>
-          </div>
-          <div className="p-4 bg-green-50 rounded-lg">
-            <h3 className="font-semibold text-green-800 mb-2">Benefits You'll Enjoy:</h3>
-            <ul className="list-disc list-inside text-sm text-green-700 space-y-1">
-              <li><strong>Increased Productivity:</strong> More time for what truly matters.</li>
-              <li><strong>Informed Decisions:</strong> Quick understanding of key global and local events.</li>
-              <li><strong>Spot Trends Instantly:</strong> Stay ahead with social media insights.</li>
-              <li><strong>Personalized Feed:</strong> News tailored to *your* interests.</li>
-            </ul>
-          </div>
+    <div className="rounded-lg p-6 shadow-md text-center mb-6 bg-white w-full max-w-none lg:max-w-6xl mx-auto transition-all duration-500 ease-in-out font-sans">
+      <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
+        SwiftRead: The Latest Space & Tech News, Delivered for Peak Productivity.
+      </h1>
+      <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
+        Stop wasting time sifting through endless feeds. SwiftRead brings you the most crucial breakthroughs in space and technology, expertly summarized to save you time and boost your daily productivity. Get informed, stay efficient.
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+        <div className="p-6 bg-gray-50 rounded-lg border border-gray-200">
+          <h3 className="font-bold text-xl text-indigo-700 mb-4">Latest in Space Intelligence</h3>
+          <ul className="list-none space-y-3 text-gray-700">
+            {spaceIntelligenceItems.map((item, index) => (
+              <li key={index} className="flex items-start">
+                <span dangerouslySetInnerHTML={{ __html: item.text }} />
+              </li>
+            ))}
+          </ul>
         </div>
-        <motion.button   initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.3 }} className="mt-6 bg-purple-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-purple-700 ">
-          Get Started Now!
-        </motion.button>
+        <div className="p-6 bg-gray-50 rounded-lg border border-gray-200">
+          <h3 className="font-bold text-xl text-teal-700 mb-4">Cutting-Edge Tech for Maximized Productivity</h3>
+          <ul className="list-none space-y-3 text-gray-700">
+            {techProductivityItems.map((item, index) => (
+              <li key={index} className="flex items-start">
+                <span dangerouslySetInnerHTML={{ __html: item.text }} />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
-      {/* Section: trending Page */}
+      <button className="mt-8 bg-blue-600 text-white px-8 py-4 rounded-full text-xl font-semibold hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-transform duration-200 transform hover:scale-105">
+        Get Your Daily Productivity Boost!
+      </button>
+    </div>
 
-
-  <div className="bg-white m-0 mx-4 my-8  rounded-xl shadow-2xl pt-8 p-6 sm:p-8  w-full  max-w-none lg:max-w-6xl border border-gray-200 transition-all duration-500 ease-in-out">
+    {/* Section: trending Page */}
+  <div className="bg-white m-0 mx-4 my-8  rounded-xl shadow-sm pt-8 p-6 sm:p-8  w-full  max-w-none lg:max-w-6xl border border-gray-200 transition-all duration-500 ease-in-out">
     <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4 text-center">
      Why Check the Trending Page?
     </h2>
