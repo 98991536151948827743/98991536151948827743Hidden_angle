@@ -1,6 +1,7 @@
 import React from 'react';
 import { Zap , } from 'lucide-react';
 import { motion } from "motion/react"
+import Footer from '../Components/footer';
 
 const HomePage = () => {
   return (
@@ -82,8 +83,7 @@ const HomePage = () => {
     </div>
   </div>
 
-
-
+      <Footer className="w-full  max-w-none lg:max-w-6xl" />
     </>
   );
 };

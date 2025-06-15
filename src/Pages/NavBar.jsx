@@ -135,7 +135,7 @@ const   NavBar = () => {
       </div>
 
       {/* Mobile Bottom Navigation */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 backdrop-blur-md bg-white/80">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 border-t border-gray-200 z-50 backdrop-blur-md bg-white/80">
         <div className="flex items-center justify-around py-3">
           {navItems.filter(item => ['home', 'trending', 'create', 'notifications', 'profile', 'reels'].includes(item.id)).map((item) => ( // Reverted 'reels'
             <Link
@@ -164,7 +164,7 @@ const   NavBar = () => {
       </div>
 
       {/* Mobile Top Bar */}
-      <div className="md:hidden fixed top-0 left-0 right-0 h-14 bg-white border-b border-gray-200 flex items-center justify-between px-4 z-40 backdrop-blur-md bg-white/80">
+      <div className="md:hidden fixed top-0 left-0 right-0 h-14  border-b border-gray-200 flex items-center justify-between px-4 z-40 backdrop-blur-md bg-white/80">
         <h1 className="text-lg font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-clip-text text-transparent">
           SwiftRead
         </h1>
@@ -190,7 +190,7 @@ const   NavBar = () => {
 
       {/* Tablet Dropdown Menu */}
       {showMobileMenu && (
-        <div className="hidden md:block lg:hidden fixed top-16 right-6 bg-white border border-gray-200 rounded-lg shadow-xl z-50 min-w-48 backdrop-blur-md bg-white/80">
+        <div className="hidden md:block lg:hidden fixed top-16 right-6  border border-gray-200 rounded-lg shadow-xl z-50 min-w-48 backdrop-blur-md bg-white/80">
           <div className="p-2">
             {navItems.filter(item => ['create', 'saved', 'explore', 'reels'].includes(item.id)).map((item) => ( // Reverted 'reels'
               <Link
