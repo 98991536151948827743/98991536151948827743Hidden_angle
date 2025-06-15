@@ -15,7 +15,7 @@ import {
   Bookmark
 } from 'lucide-react';
 
-const NavBar = () => {
+const   NavBar = () => {
   const location = useLocation();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [notifications, setNotifications] = useState(3);
@@ -210,4 +210,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default  NavBar;

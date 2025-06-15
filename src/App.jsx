@@ -2,10 +2,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import NavBar from './components/NavBar';
+
 
 // Import Page Components
 import HomePage from './Pages/HomePage';
+import NavBar from './Pages/NavBar';
 import TrendingPage from './Pages/TrendingPage';
 import SearchPage from './Pages/SearchPage';
 import ExplorePage from './Pages/ExplorePage';
@@ -17,14 +18,14 @@ import NotificationsPage from './Pages/NotificationsPage';
 import ReelsPage from './Pages/ReelsPage'; // --- REVERTED IMPORT ---
 
 
-const App = () => {
+const App = () => { 
   return (
     <Router>
       <NavBar />
 
       {/* Main Content Area: Adjusted for full-height reels content */}
       {/* We remove all default padding and margins here. Each page will now handle its own layout */}
-      <div className="lg:ml-64 min-h-screen bg-gray-50 flex flex-col items-center">
+      <div className="lg:ml-64 min-h-screen bg-gray-50 flex flex-col items-center mt-10">
         <Routes>
           {/* Other Pages: add p-6 or appropriate padding within their own component JSX */}
           <Route path="/" element={<HomePage />} />
