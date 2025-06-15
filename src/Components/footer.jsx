@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Footer() {
-    // Define the footer items as a constant array within the component
     const footerItems = [
         { name: "About Us", link: "#" },
         { name: "Blog", link: "#" },
