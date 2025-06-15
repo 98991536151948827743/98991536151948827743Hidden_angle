@@ -23,16 +23,9 @@ const   NavBar = () => {
 
   const navItems = [
     { id: 'home', icon: Home, label: 'Home', path: '/' },
-    { id: 'trending', icon: TrendingUp, label: 'Trending', path: '/trending' },
     { id: 'search', icon: Search, label: 'Search', path: '/search' },
-    { id: 'explore', icon: Compass, label: 'Explore', path: '/explore' },
-    // --- REVERTED THIS ENTRY TO REELS ---
-    { id: 'reels', icon: Film, label: 'Reels', path: '/reels' }, // Reverted name and path
-    // --- END REVERT ---
-    { id: 'messages', icon: MessageCircle, label: 'Messages', count: messages, path: '/messages' },
-    { id: 'notifications', icon: Heart, label: 'Notifications', count: notifications, path: '/notifications' },
-    { id: 'create', icon: PlusSquare, label: 'Submit News', path: '/create' },
-    { id: 'saved', icon: Bookmark, label: 'Saved', path: '/saved' },
+    { id: 'trending', icon: TrendingUp, label: 'Trending', path: '/trending' },
+    { id: 'reels', icon: Film, label: 'Reels', path: '/reels' },
     { id: 'profile', icon: User, label: 'Profile', path: '/profile' }
   ];
 

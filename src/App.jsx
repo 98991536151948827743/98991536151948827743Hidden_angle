@@ -9,12 +9,9 @@ import HomePage from './Pages/HomePage';
 import NavBar from './Pages/NavBar';
 import TrendingPage from './Pages/TrendingPage';
 import SearchPage from './Pages/SearchPage';
-import ExplorePage from './Pages/ExplorePage';
-import CreatePage from './Pages/CreatePage';
-import SavedPage from './Pages/SavedPage';
+
 import ProfilePage from './Pages/ProfilePage';
-import MessagesPage from './Pages/MessagesPage';
-import NotificationsPage from './Pages/NotificationsPage';
+
 import ReelsPage from './Pages/ReelsPage'; // --- REVERTED IMPORT ---
 
 
@@ -31,15 +28,9 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/trending" element={<TrendingPage />} />
           <Route path="/search" element={<SearchPage />} />
-          <Route path="/explore" element={<ExplorePage />} />
 
           {/* ReelsPage: Designed to fill the viewport and manage its own internal spacing */}
           <Route path="/reels" element={<ReelsPage />} /> {/* --- REVERTED ROUTE --- */}
-
-          <Route path="/messages" element={<MessagesPage />} />
-          <Route path="/notifications" element={<NotificationsPage />} />
-          <Route path="/create" element={<CreatePage />} />
-          <Route path="/saved" element={<SavedPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="*" element={
             <div className="w-full bg-white rounded-lg p-6 shadow-md text-center">
