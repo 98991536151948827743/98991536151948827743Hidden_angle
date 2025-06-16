@@ -51,7 +51,7 @@ const   NavBar = () => {
   return (
     <>
       {/* Desktop Sidebar Navigation */}
-      <div className="hidden lg:flex fixed left-0 top-0 h-full w-64 border-r border-gray-200 bg-white flex-col z-50 backdrop-blur-md bg-white/80">
+      <div className="hidden lg:flex fixed left-0 top-0 h-full w-64 border-r border-gray-200 bg-white flex-col z-50 backdrop-blur-md">
         <div className="p-6 border-b border-gray-200">
           <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-clip-text text-transparent">
             SwiftRead

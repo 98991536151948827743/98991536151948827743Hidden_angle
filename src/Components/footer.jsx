@@ -8,7 +8,7 @@ export default function Footer() {
         { name: "Privacy Policy", link: "#" },
         { name: "Terms of Service", link: "#" },
         { name: "Help", link: "#" },
-        { name: "Careers", link: "#" },
+        { name: "Careers", link: "/careers" },
         { name: "Press", link: "#" },
         { name: "Advertise", link: "#" }
     ];
