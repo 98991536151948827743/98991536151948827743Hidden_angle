@@ -16,7 +16,7 @@ export default function CareersPage() {
         </p>
         <motion.button
         initial={{ scale: 0, opacity: 0, y: 50  }} animate={{ scale: 1 }} transition={{ delay: 0.3 }}   whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 1 }} 
-        onClick={() => window.location.href = '/trending'}
+        onClick={() => window.location.href = '/CareerAlerts'}
         className="bg-indigo-700 hover:bg-indigo-800 text-white font-bold py-3 px-6 rounded-full shadow-lg "
         >
           Subscribe for Job Alerts
