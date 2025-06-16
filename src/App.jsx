@@ -11,7 +11,7 @@ import ProfilePage from './Pages/ProfilePage';
 import ReelsPage from './Pages/ReelsPage';
 
 import CareersPage from './Pages/Career';
-import mission from './Pages/mission';
+import Mission from './Pages/mission';
 
 
 const App = () => { 
@@ -27,7 +27,7 @@ const App = () => {
           <Route path="/reels" element={<ReelsPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/careers" element={<CareersPage />} />
-          <Route path="/mission" element={<mission />} />
+          <Route path="/mission" element={<Mission />} />
 
           {/* Fallback route for 404 */}
           <Route path="*" element={

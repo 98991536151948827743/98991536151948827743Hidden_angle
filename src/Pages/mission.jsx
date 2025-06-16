@@ -1,6 +1,6 @@
 import React from 'react';
 
-const mission = () => {
+const Mission = () => {
   return (
     <div className="w-full bg-white rounded-lg p-6 shadow-md text-center">
       <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
@@ -9,4 +9,4 @@ const mission = () => {
   );
 };
 
-export default mission;
+export default Mission;
