@@ -1,9 +1,9 @@
-import React from 'react';
-import { Zap , } from 'lucide-react';
 import { motion } from "motion/react"
 import Footer from '../Components/footer';
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+    const navigate = useNavigate();
     const spaceIntelligenceItems = [
     { text: "<strong>Quick Digests:</strong> Get concise updates on new missions and discoveries." },
     { text: "<strong>Impactful Insights:</strong> Understand key cosmic events without the fluff." },
@@ -48,7 +48,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <button className="mt-8 bg-blue-600 text-white px-8 py-4 rounded-full text-xl font-semibold hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-transform duration-200 transform hover:scale-105">
+      <button onClick={() => navigate("/NewsPage")} className="mt-8 bg-blue-600 text-white px-8 py-4 rounded-full text-xl font-semibold hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-transform duration-200 transform hover:scale-105">
         Get Your Daily Productivity Boost!
       </button>
     </div>
@@ -88,7 +88,7 @@ const HomePage = () => {
 
     <div className="flex justify-center">
       <motion.button initial={{ scale: 0, opacity: 0, y: 50  }} animate={{ scale: 1 }} transition={{ delay: 0.3 }}   whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 1 }} 
-        onClick={() => window.location.href = '/trending'}
+        onClick={() => navigate("/trending")}
         className="bg-indigo-700 hover:bg-indigo-800 text-white font-bold py-3 px-6 rounded-full shadow-lg "
       >
         Go to Trending Page

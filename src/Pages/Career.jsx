@@ -8,10 +8,10 @@ export default function CareersPage() {
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
           Career Opportunities
         </h1>
-        <p className="text-xl text-gray-700 mb-4">
+        <p className="text-md text-gray-700 mb-4">
           While we are continually expanding our team, there are no open positions available at this time.
         </p>
-        <p className="text-lg text-gray-600 mb-8">
+        <p className="text-md text-gray-600 mb-8">
           We encourage you to visit this page regularly for updates. Alternatively, you may subscribe to our talent network to receive notifications about future opportunities.
         </p>
         <motion.button

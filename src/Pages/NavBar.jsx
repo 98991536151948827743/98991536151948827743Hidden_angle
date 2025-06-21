@@ -17,7 +17,7 @@ const   NavBar = () => {
     { id: 'home', icon: Home, label: 'Home', path: '/' },
     { id: 'search', icon: Search, label: 'Search', path: '/search' },
     { id: 'trending', icon: TrendingUp, label: 'Trending', path: '/trending' },
-    { id: 'reels', icon: Film, label: 'Reels', path: '/reels' },
+    { id: 'News', icon: Film, label: 'News', path: '/NewsPage' },
     { id: 'profile', icon: User, label: 'Profile', path: '/profile' }
   ];
 

@@ -8,10 +8,10 @@ import TrendingPage from './Pages/TrendingPage';
 import SearchPage from './Pages/SearchPage';
 import ProfilePage from './Pages/ProfilePage';
 
-import ReelsPage from './Pages/ReelsPage';
+import NewsPage from './Pages/NewsPage';
 
 import CareersPage from './Pages/Career';
-import Mission from './Pages/mission';
+import Mission from './Pages/Mission';
 
 
 const App = () => { 
@@ -24,7 +24,7 @@ const App = () => {
           <Route path="/trending" element={<TrendingPage />} />
           <Route path="/search" element={<SearchPage />} />
 
-          <Route path="/reels" element={<ReelsPage />} />
+          <Route path="/NewsPage" element={<NewsPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/mission" element={<Mission />} />
