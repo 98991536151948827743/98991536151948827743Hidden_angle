@@ -2,7 +2,7 @@ import React from 'react';
 
 const ReelCard = ({ username, avatarUrl, subContentTitle, subContentText }) => {
   return (
-    <div className="h-screen relative  bg-gray-100 rounded-none md:rounded-lg mb-8 mt-8 lg:mt-0 shadow-lg overflow-hidden flex flex-col mx-auto w-full md:max-w-lg">
+    <div className="h-screen relative  bg-gray-100 rounded-none md:rounded-lg mb-8 mt-4 lg:mt-0 shadow-lg overflow-hidden flex flex-col mx-auto w-full md:max-w-lg">
       <div className="flex items-center p-4 bg-gray-800 text-white rounded-t-xl">
         <img
           src={avatarUrl}

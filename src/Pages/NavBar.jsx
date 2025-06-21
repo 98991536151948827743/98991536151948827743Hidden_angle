@@ -4,7 +4,6 @@ import {
   Home,
   Search,
   Film,
-  Menu,
   User,
   TrendingUp,
 } from 'lucide-react';
@@ -81,7 +80,7 @@ const   NavBar = () => {
           SwiftRead
         </h1>
         <div className="flex items-center space-x-6">
-          {navItems.filter(item => ['home', 'trending', 'search','reels', 'profile'].includes(item.id)).map((item) => (
+          {navItems.filter(item => ['home', 'trending', 'search','News', 'profile'].includes(item.id)).map((item) => (
             <Link
               key={item.id}
               to={item.path}
@@ -109,7 +108,7 @@ const   NavBar = () => {
       {/* Mobile Bottom Navigation */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 border-t border-gray-200 z-50 backdrop-blur-md bg-white/80">
         <div className="flex items-center justify-around py-3">
-          {navItems.filter(item => ['home','search', 'trending', 'profile', 'reels'].includes(item.id)).map((item) => ( // Reverted 'reels'
+          {navItems.filter(item => ['home','search', 'trending','News', 'profile'].includes(item.id)).map((item) => ( // Reverted 'reels'
             <Link
               key={item.id}
               to={item.path}
