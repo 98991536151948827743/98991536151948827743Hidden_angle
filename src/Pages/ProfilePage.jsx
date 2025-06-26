@@ -1,4 +1,3 @@
-// src/Pages/ProfilePage.jsx
 import React from 'react';
 
 const ProfilePage = () => {
